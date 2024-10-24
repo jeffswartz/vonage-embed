@@ -1,0 +1,16 @@
+project:
+  name: vonage-video-react-app
+instance:
+  name: dev
+  runtime: nodejs22
+  region: aws.euw1
+  entrypoint: [yarn, run-server]
+  application-id: <APP_ID>
+  environment:
+    - name: OT_API_KEY
+      secret: api_key
+    - name: OT_API_SECRET
+      secret: api_secret
+debug:
+  entrypoint: [yarn, run-server]
+  application-id: <APP_ID>

@@ -1,0 +1,10 @@
+# some individual files
+.eslintrc.cjs
+*.json
+*.md
+*.d.ts
+
+# some directories
+*/dist/
+*/node_modules/
+public/js/

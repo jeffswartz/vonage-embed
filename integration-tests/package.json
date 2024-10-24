@@ -1,0 +1,15 @@
+{
+  "name": "integration-tests",
+  "version": "0.0.1",
+  "description": "integration test workspace for vonage video react app",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --project='Google Chrome Fake Devices' --project=firefox --project='Microsoft Edge' --project='Mobile Chrome'",
+    "updateScreenshots": "playwright test --project='Google Chrome Fake Devices' --project=firefox --project='Microsoft Edge' --project='Mobile Chrome'  --update-snapshots",
+    "postinstall": "playwright install"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.46.0",
+    "@types/node": "^20.12.7"
+  }
+}

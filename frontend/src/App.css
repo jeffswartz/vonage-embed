@@ -1,0 +1,57 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+body:has(div.meetingRoom) {
+  overflow: hidden; /* Hide scrollbars */
+}
+
+/*
+  This animation controls the bar height for the volume indicator of a publisher.
+  The bar starts at a minimal height of 25% and grows with the audio level
+  received from the participant.
+*/
+@keyframes speech {
+  0% {
+    height: 75%;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+/*
+  This animation moves an emoji from the bottom of the screen to the top.
+  The emoji starts with full opacity and fades out as it moves upwards.
+  As it moves up, the emoji scales down in size, changes its horizontal position,
+  and rotates side to side, creating a floating effect.
+*/
+@keyframes moveEmoji {
+  0% {
+    transform: translateX(0) rotate(0deg);
+    opacity: 1;
+    bottom: -10%;
+  }
+
+  20% {
+    transform: translateX(2rem) rotate(-8deg);
+  }
+
+  50% {
+    transform: translateX(4rem) rotate(16deg) scale(1);
+    opacity: 1;
+  }
+
+  75% {
+    transform: translateX(-2rem) rotate(-20deg) scale(0.5);
+  }
+
+  100% {
+    transform: translateX(0px) rotate(0deg) scale(0.2);
+    opacity: 0;
+    bottom: 100%;
+  }
+}
